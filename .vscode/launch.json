@@ -1,0 +1,12 @@
+{
+  "configurations": [
+    {
+      "name": "Run wdio",
+      "program": "${workspaceFolder}/node_modules/.bin/wdio",
+      "args": ["run", "./wdio.conf.ts"],
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    }
+  ]
+}
