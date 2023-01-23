@@ -1,5 +1,7 @@
 # webdriverio_playground
 
+[TOC]
+
 ## Getting started 
 
 Install dependencies with command:  
@@ -7,6 +9,9 @@ Install dependencies with command:
 
 Run tests with command:  
 > `npm run wdio`
+
+Run tests with debugger attached in `vscode`
+> see `.vscode/launch.json` configurations objects
 
 ## Tasks Iteration #1: write e2e test
 
@@ -29,6 +34,8 @@ Github repo is [https://github.com/saucelabs/the-internet](https://github.com/sa
 - [ ] Write test for :point_right: [Exit intent](https://the-internet.herokuapp.com/exit_intent)
 
 ## Tasks Iteration #2: write e2e test using page objects
+
+TODO 
 
 - [ ] Write test for :point_right: [Login](https://the-internet.herokuapp.com/login)
   - [ ] Design a page object that represents any `Page` 
