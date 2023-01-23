@@ -1,7 +1,5 @@
 # webdriverio_playground
 
-[TOC]
-
 ## Getting started 
 
 Install dependencies with command:  
