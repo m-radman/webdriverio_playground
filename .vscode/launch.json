@@ -25,7 +25,7 @@
       "request": "launch",
       "name": "Run wdio (one test)",
       "program": "${workspaceFolder}/node_modules/.bin/wdio",
-      "args": ["run", "./wdio.conf.ts", "--spec", "./test/specs/checkbox.e2e.ts"],
+      "args": ["run", "./wdio.conf.ts", "--spec", "./test/specs/inputs.e2e.ts"],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
