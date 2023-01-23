@@ -2,6 +2,7 @@
   "name": "my-new-project",
   "type": "module",
   "devDependencies": {
+    "@types/jasmine": "^4.3.1",
     "@wdio/cli": "^8.2.1",
     "@wdio/jasmine-framework": "^8.2.1",
     "@wdio/junit-reporter": "^8.2.0",
@@ -16,8 +17,5 @@
   },
   "scripts": {
     "wdio": "wdio run ./wdio.conf.ts"
-  },
-  "dependencies": {
-    "@types/jasmine": "^4.3.1"
   }
 }
