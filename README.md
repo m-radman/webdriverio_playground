@@ -35,7 +35,7 @@ Github repo is [https://github.com/saucelabs/the-internet](https://github.com/sa
 
 ## Tasks Iteration #2: write e2e test using page objects
 
-- TODO :under_conostruction: 
+- TODO :construction: 
 
 ## WDIO Example with LoginPage: go through example code to understand benefits of the solution with page objects 
 - [ ] Write test for :point_right: [Login](https://the-internet.herokuapp.com/login)
@@ -66,4 +66,4 @@ Github repo is [https://github.com/saucelabs/the-internet](https://github.com/sa
         }
 
         ``` 
-  - TODO ... :under_construction:
+  - TODO ... :construction:
