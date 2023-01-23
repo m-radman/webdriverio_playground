@@ -10,7 +10,9 @@ Run tests with command:
 
 ## Tasks Iteration #1: write e2e test
 
-Examples are hosted at [the-internet](https://the-internet.herokuapp.com/) :)
+Examples are hosted at [the-internet](https://the-internet.herokuapp.com/) :)  
+Github repo is [https://github.com/saucelabs/the-internet](https://github.com/saucelabs/the-internet)  
+
 - [x] Write test for :point_right: [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
 - [ ] Write test for :point_right: [Inputs](https://the-internet.herokuapp.com/inputs)
 - [ ] Write test for :point_right: [Key Presses](https://the-internet.herokuapp.com/key_presses?)
