@@ -28,5 +28,9 @@ describe("File upload tests", () => {
     expect(await uploadedFile.getText()).toBe('test.png')
   })
 
-  // todo - upload  pdf file 
+  // todo - find another way to do file upload 
+  // without using uploadFile function 
+  // https://webdriver.io/docs/api/browser/uploadFile#example
+
+  // hint - sendKeys to input of type "file" ?? 
 })
