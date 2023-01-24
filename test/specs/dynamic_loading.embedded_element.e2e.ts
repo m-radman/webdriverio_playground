@@ -5,15 +5,14 @@ describe("test for dynamic loading with rendered element", () => {
   it("test for dynamic loading with rendered element", async () => {
     await browser.url(`${BASE_URL}/dynamic_loading`)
 
-    await (await $("#content > div > a:nth-child(8)")).click()
+    await $("#content > div > a:nth-child(8)").click()
+    expect(await $("#finish").isExisting()).toBe(false)
 
-    expect(await (await $("#finish")).isExisting()).toBe(false)
+    await $("#start > button").click()
+    await $("#finish").waitForDisplayed()
 
-    await (await $("#start > button")).click()
-    await (await $("#finish")).waitForDisplayed()
-
-    expect(await (await $("#finish")).isExisting()).toBe(true)
-    expect(await (await $("#finish")).isDisplayedInViewport()).toBe(true)
-    expect(await (await $("#start > button")).isDisplayedInViewport()).toBe(false)
+    expect(await $("#finish").isExisting()).toBe(true)
+    expect(await $("#finish").isDisplayedInViewport()).toBe(true)
+    expect(await $("#start > button").isDisplayedInViewport()).toBe(false)
   })
 })
