@@ -24,12 +24,12 @@ Github repo is [https://github.com/saucelabs/the-internet](https://github.com/sa
 - [x] Write test for :point_right: [Dynamic Loading](https://the-internet.herokuapp.com/dynamic_loading)
 - [x] Write test for :point_right: [Dropdown](https://the-internet.herokuapp.com/dropdown)
 - [ ] Write test for :point_right: [Drag and Drop](https://the-internet.herokuapp.com/drag_and_drop)
-- [ ] Write test for :point_right: [Add Remove Elements](https://the-internet.herokuapp.com/add_remove_elements/)
-- [ ] Write test for :point_right: [Redirector](https://the-internet.herokuapp.com/redirector)
-- [ ] Write test for :point_right: [Slow resources](https://the-internet.herokuapp.com/slow)
+- [x] Write test for :point_right: [Add Remove Elements](https://the-internet.herokuapp.com/add_remove_elements/)
+- [x] Write test for :point_right: [Redirector](https://the-internet.herokuapp.com/redirector)
+- `EXAMPLE IS NOT WORKING` Write test for :point_right: [Slow resources](https://the-internet.herokuapp.com/slow)
 - [x] Write test for :point_right: [Frames](https://the-internet.herokuapp.com/frames)
 - [x] Write test for :point_right: [Windows](https://the-internet.herokuapp.com/windows)
-- [ ] Write test for :point_right: [File upload](https://the-internet.herokuapp.com/upload)
+- [x] Write test for :point_right: [File upload](https://the-internet.herokuapp.com/upload)
 - [ ] Write test for :point_right: [Exit intent](https://the-internet.herokuapp.com/exit_intent)
 
 ## Tasks Iteration #2: write e2e test using page objects
