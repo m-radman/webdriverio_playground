@@ -5,27 +5,27 @@ describe("Hover tests", () => {
   it("tests hovering over user 1", async () => {
     await browser.url(`${BASE_URL}/hovers`)
 
-    await (await $("img[alt='User Avatar']")).moveTo()
+    await $("div.example > div.figure:nth-of-type(1) > img").moveTo()
 
-    expect(await (await $("h5=name: user1")).isDisplayedInViewport()).toBe(true)
-    expect(await (await $("a=View profile")).isDisplayedInViewport()).toBe(true)
+    expect (await $("div.example > div.figure:nth-of-type(1) > div.figcaption > h5").isDisplayedInViewport()).toBe(true)
+    expect (await $("div.example > div.figure:nth-of-type(1) > div.figcaption > a").isDisplayedInViewport()).toBe(true)
   })
 
   it("tests hovering over user 2", async () => {
     await browser.url(`${BASE_URL}/hovers`)
 
-    await (await $("#content > div > div:nth-child(4) > img")).moveTo()
+    await $("div.example > div.figure:nth-of-type(2) > img").moveTo()
 
-    expect(await (await $("#content > div > div:nth-child(4) > div > h5")).isDisplayedInViewport()).toBe(true)
-    expect(await (await $("#content > div > div:nth-child(4) > div > a")).isDisplayedInViewport()).toBe(true)
+    expect(await $("div.example > div.figure:nth-of-type(2) > div.figcaption > h5").isDisplayedInViewport()).toBe(true)
+    expect(await $("div.example > div.figure:nth-of-type(2) > div.figcaption > a").isDisplayedInViewport()).toBe(true)
   })
 
   it("tests hovering over user 3", async () => {
     await browser.url(`${BASE_URL}/hovers`)
 
-    await (await $("#content > div > div:nth-child(5) > img")).moveTo()
+    await $("div.example > div.figure:nth-of-type(3) > img").moveTo()
 
-    expect(await (await $("#content > div > div:nth-child(5) > div > h5")).isDisplayedInViewport()).toBe(true)
-    expect(await (await $("#content > div > div:nth-child(5) > div > a")).isDisplayedInViewport()).toBe(true)
+    expect(await $("div.example > div.figure:nth-of-type(3) > div.figcaption > h5").isDisplayedInViewport()).toBe(true)
+    expect(await $("div.example > div.figure:nth-of-type(3) > div.figcaption > a").isDisplayedInViewport()).toBe(true)
   })
 })
