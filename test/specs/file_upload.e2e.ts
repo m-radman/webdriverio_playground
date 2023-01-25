@@ -6,7 +6,7 @@ const BASE_URL = "https://the-internet.herokuapp.com"
  * Note: See this example https://webdriver.io/docs/api/browser/uploadFile#example
  */
 describe("File upload tests", () => {
-  it("user should be able to upload file", async () => {
+  xit("user should be able to upload file", async () => {
     await browser.url(`${BASE_URL}/upload`)
 
     /**
@@ -33,4 +33,14 @@ describe("File upload tests", () => {
   // https://webdriver.io/docs/api/browser/uploadFile#example
 
   // hint - sendKeys to input of type "file" ?? 
+
+  it("user should be able to upload file", async () => {
+    await browser.url(`${BASE_URL}/upload`)
+    const filePath = "./assets/images/test.png"
+    const uploadButton = "#file-upload"
+   
+    await browser.elementSendKeys(uploadButton, filePath)
+    await $("#file-submit").click()
+    expect(await $("#uploaded-files").getText()).toBe("test.png")
+  })
 })
