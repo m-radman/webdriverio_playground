@@ -1,8 +1,6 @@
-// todo 
-
-const BASE_URL = "https://the-internet.herokuapp.com"
-
 describe("Exit intent test", () => {
+  const BASE_URL = "https://the-internet.herokuapp.com"
+
   it("should activate modal window", async () => {
     await browser.url(`${BASE_URL}/exit_intent`)
 
