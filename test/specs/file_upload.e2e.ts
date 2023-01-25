@@ -6,7 +6,7 @@ const BASE_URL = "https://the-internet.herokuapp.com"
  * Note: See this example https://webdriver.io/docs/api/browser/uploadFile#example
  */
 describe("File upload tests", () => {
-  xit("user should be able to upload file with wdio's remote upload function", async () => {
+  it("user should be able to upload file with wdio's remote upload function", async () => {
     await browser.url(`${BASE_URL}/upload`)
 
     /**
@@ -28,7 +28,7 @@ describe("File upload tests", () => {
     expect(await uploadedFile.getText()).toBe('test.png')
   })
 
-  xit("user should be able to upload file without wdio's remote upload file function ", async () => {
+  it("user should be able to upload file without wdio's remote upload file function ", async () => {
     await browser.url(`${BASE_URL}/upload`)
 
     /**
