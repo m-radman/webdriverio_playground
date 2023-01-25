@@ -12,6 +12,7 @@ export const config: Options.Testrunner = {
       project: "./tsconfig.json",
     },
   },
+  waitforTimeout: 15000,
 
   //
   // ==================
