@@ -66,7 +66,7 @@ export const config: Options.Testrunner = {
       //
       browserName: "chrome",
       acceptInsecureCerts: true,
-      // 'goog:chromeOptions': {
+      //'goog:chromeOptions': {
       //   args: ['headless', 'disable-gpu']
       // },
       // If outputDir is provided WebdriverIO can capture driver session logs
@@ -109,7 +109,6 @@ export const config: Options.Testrunner = {
   baseUrl: "https://the-internet.herokuapp.com",
   //
   // Default timeout for all waitFor* commands.
-  waitforTimeout: 10000,
   //
   // Default timeout in milliseconds for request
   // if browser driver or grid doesn't send response
