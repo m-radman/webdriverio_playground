@@ -37,7 +37,93 @@ Github repo is [https://github.com/saucelabs/the-internet](https://github.com/sa
 
 ## Tasks Iteration #2: write e2e test using page objects
 
-- TODO :construction:
+Write test for Login functionality 
+- [x] Write test for :point_right: [Login](https://the-internet.herokuapp.com/login)
+
+:point_down: 
+
+Write same test for Login functionality but now _using Page Objects_ 
+
+**Steps of the process:**  
+1. test the functionality manually 
+2. write down test scenarios / test cases 
+  ```
+  Test scenario 1: user should be able to login successfully with valid credentials
+    1 set username and VALID password => tomsmith/SuperSecretPassword!
+    2 click LOGIN button 
+    3 expect to be navigated to URL /secure
+    4 expect SUCCESS message to be in viewport 
+
+  Test scenario 2: user should NOT be able to login with invalid credentials
+    1 set username and INVALID password => tomsmith/bla
+    2 click LOGIN button 
+    3 expect ERROR message to be in viewport 
+  ```
+3. detect pages and components in UI (in viewport) that represent different PAGE OBJECTS
+  - `LoginPage` page object (url matches `/login`)
+    ![image](assets/images/LoginPage.png)
+    ```
+    css selectors: 
+    'input#username'
+    'input#password' 
+    'button[type="submit"]'
+    ^^ these 3 will be 3 fields on our LoginPage class  
+    LoginPage class will represent our first page object 
+    ```
+
+  - `SecurePage` page object (url matches `/secure`)
+    ![image](assets/images/SecurePage.png)
+    ```
+    css selectors: 
+    'a[href="/logout"]'
+    ^^ this will be 1 field on our SecurePage class  
+    SecurePage class will represent our second page object 
+    ```
+
+  - `FlashMessage` page object (common functionality)
+    ![image](assets/images/FlashMessage.png)
+    ```
+    css selectors: 
+    'div#flash-messages > div[class="flash success"]'
+    'div#flash-messages > div[class="flash error"]'
+    ^^ these two will be 2 fields on our FlashMessage class  
+    FlashMessage class will represent our third page object 
+    note that this functionality is common and reused across different pages 
+    ```
+
+4. write page objects code (3 files, one class per file)
+  - _./test/pageobjects/LoginPage.ts_ -> `class LoginPage { ... }`
+  - _./test/pageobjects/SecurePage.ts_ -> `class SecurePage { ... }`
+  - _./test/pageobjects/FlashMessage.ts_ -> `class FlashMessage { ... }`
+
+5. go back to test script (`./test/specs/login.page_objects.e2e.ts` file)
+   and try to replace existing steps with equivalent lines that relay on Page Object class methods instead 
+
+
+
+**Bookmarks:** 
+ - Select an element in DOM using CSS selectors -> [CSS cheatsheet](https://devhints.io/css)  
+ - Select an element in DOM using XPath selectors -> [XPath cheatsheet](https://devhints.io/xpath)  
+
+
+### Tasks to work out Page OBject design 
+
+- [ ] Write test for :point_right: [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
+- [ ] Write test for :point_right: [Inputs](https://the-internet.herokuapp.com/inputs)
+- [ ] Write test for :point_right: [Key Presses](https://the-internet.herokuapp.com/key_presses?)
+- [ ] Write test for :point_right: [JavaScript Alerts](https://the-internet.herokuapp.com/javascript_alerts)
+- [ ] Write test for :point_right: [Hovers](https://the-internet.herokuapp.com/hovers)
+- [ ] Write test for :point_right: [Dynamic Loading](https://the-internet.herokuapp.com/dynamic_loading)
+- [ ] Write test for :point_right: [Dropdown](https://the-internet.herokuapp.com/dropdown)
+- [ ] Write test for :point_right: [Drag and Drop](https://the-internet.herokuapp.com/drag_and_drop)
+- [ ] Write test for :point_right: [Add Remove Elements](https://the-internet.herokuapp.com/add_remove_elements/)
+- [ ] Write test for :point_right: [Frames](https://the-internet.herokuapp.com/frames)
+- [ ] Write test for :point_right: [Windows](https://the-internet.herokuapp.com/windows)
+- [ ] Write test for :point_right: [File upload](https://the-internet.herokuapp.com/upload)
+- [ ] Write test for :point_right: [Exit intent](https://the-internet.herokuapp.com/exit_intent)
+
+
+
 
 ## WDIO Example with LoginPage: go through example code to understand benefits of the solution with page objects
 
