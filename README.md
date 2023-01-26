@@ -37,7 +37,74 @@ Github repo is [https://github.com/saucelabs/the-internet](https://github.com/sa
 
 ## Tasks Iteration #2: write e2e test using page objects
 
-- TODO :construction:
+Write test for Login functionality 
+- [x] Write test for :point_right: [Login](https://the-internet.herokuapp.com/login)
+
+:point_down: 
+
+Write same test for Login functionality but now _using Page Objects_ 
+- [] Write  :point_right: 
+- [] Write  :point_right: 
+- [] 
+
+Steps of the process 
+1. test the functionality manually 
+2. write down test scenarios / test cases 
+  ```
+  Test scenario 1: user should be able to login successfully with valid credentials
+    1 set username and VALID password => tomsmith/SuperSecretPassword!
+    2 click LOGIN button 
+    3 expect to be navigated to URL /secure
+    4 expect SUCCESS message to be in viewport 
+
+  Test scenario 2: user should NOT be able to login with invalid credentials
+    1 set username and INVALID password => tomsmith/bla
+    2 click LOGIN button 
+    3 expect ERROR message to be in viewport 
+  ```
+3. detect pages and components in UI (in viewport) that represent different PAGE OBJECTS
+  - `LoginPage` page object (url matches `/login`)
+    ![image](assets/images/LoginPage.png)
+    ```
+    css selectors: 
+    'input#username'
+    'input#password' 
+    'button[type="submit"]'
+    ^^ these 3 will be 3 fields on our LoginPage class  
+    LoginPage class will represent our first page object 
+    ```
+
+  - `SecurePage` page object (url matches `/secure`)
+    ![image](assets/images/SecurePage.png)
+    ```
+    css selectors: 
+    'a[href="/logout"]'
+    ^^ this will be 1 field on our SecurePage class  
+    SecurePage class will represent our second page object 
+    ```
+
+  - `FlashMessage` page object (common functionality)
+    ![image](assets/images/FlashMessage.png)
+    ```
+    css selectors: 
+    'div#flash-messages > div[class="flash success"]'
+    'div#flash-messages > div[class="flash error"]'
+    ^^ these two will be 2 fields on our FlashMessage class  
+    FlashMessage class will represent our third page object 
+    note that this functionality is common and reused across different pages 
+    ```
+
+4. write page objects code (3 files, one class per file)
+  - ./test_v2/pageobjects/LoginPage.ts -> `class LoginPage { ... }`
+  - ./test_v2/pageobjects/SecurePage.ts -> `class SecurePage { ... }`
+  - ./test_v2/pageobjects/FlashMessage.ts -> `class FlashMessage { ... }`
+
+5. go back to test script (`./test_v2/specs/login.page_objects.e2e.ts` file)
+   and try to replace existing steps with equivalent lines that relay on Page Object class methods instead 
+
+**Bookmarks:** 
+ - Select an element in DOM using CSS selectors -> [CSS cheatsheet](https://devhints.io/css)  
+ - Select an element in DOM using XPath selectors -> [XPath cheatsheet](https://devhints.io/xpath)  
 
 ## WDIO Example with LoginPage: go through example code to understand benefits of the solution with page objects
 
