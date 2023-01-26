@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
         "moduleResolution": "node",
-        "module": "ESNext",
+        "module": "es6",
+        "sourceMap": true,
         "types": [
             "node",
             "@wdio/globals/types",

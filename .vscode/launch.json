@@ -15,7 +15,7 @@
       "request": "launch",
       "name": "Run wdio (current test file)",
       "program": "${workspaceFolder}/node_modules/@wdio/cli/bin/wdio",
-      "args": ["run", "./wdio.conf.ts", "--spec", "./test_v2/specs/${fileBasename}"],
+      "args": ["run", "./wdio.conf.ts", "--spec", "./test/specs/${fileBasename}"],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
@@ -25,7 +25,7 @@
       "request": "launch",
       "name": "Run wdio (one test)",
       "program": "${workspaceFolder}/node_modules/@wdio/cli/bin/wdio",
-      "args": ["run", "./wdio.conf.ts", "--spec", "./test_v2/specs/login.e2e.ts"],
+      "args": ["run", "./wdio.conf.ts", "--spec", "./test/specs/login.page_objects.e2e.ts"],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
       "internalConsoleOptions": "neverOpen"
