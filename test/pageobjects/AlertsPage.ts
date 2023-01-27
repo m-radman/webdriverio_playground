@@ -19,15 +19,15 @@ class AlertPage {
     await browser.url(AlertPage.url)
   }
 
-  async clickAlertBtn() {
+  async triggerAlert() {
     await $(this.alertBtn).click()
   }
 
-  async clickConfirmBtn() {
+  async triggerConfirmAlert() {
     await $(this.confirmBtn).click()
   }
 
-  async clickPromptBtn() {
+  async triggerPromptAlert() {
     await $(this.promptBtn).click()
   }
 
@@ -35,7 +35,7 @@ class AlertPage {
     await browser.waitUntil(EC.alertIsPresent())
   }
 
-  async checkResult(): Promise<string> {
+  async getResult(): Promise<string> {
     return $(this.result).getText()
   }
 }

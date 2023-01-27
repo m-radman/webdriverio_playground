@@ -26,55 +26,55 @@ describe("JS Alerts tests with Page Objects ", () => {
   it("should click on alert", async () => {
     await AlertsPageInstance.open()
 
-    await AlertsPageInstance.clickAlertBtn()
+    await AlertsPageInstance.triggerAlert()
     await AlertsPageInstance.waitForAlert()
     await browser.acceptAlert()
-    expect(await AlertsPageInstance.checkResult()).toBe("You successfully clicked an alert")
+    expect(await AlertsPageInstance.getResult()).toBe("You successfully clicked an alert")
   })
 
   it("should click 'OK' on alert", async () => {
     await AlertsPageInstance.open()
 
-    await AlertsPageInstance.clickConfirmBtn()
+    await AlertsPageInstance.triggerConfirmAlert()
     await AlertsPageInstance.waitForAlert()
     await browser.acceptAlert()
-    expect(await AlertsPageInstance.checkResult()).toBe("You clicked: Ok")
+    expect(await AlertsPageInstance.getResult()).toBe("You clicked: Ok")
   })
 
   it("should click 'Cancel' on alert", async () => {
     await AlertsPageInstance.open()
 
-    await AlertsPageInstance.clickConfirmBtn()
+    await AlertsPageInstance.triggerConfirmAlert()
     await AlertsPageInstance.waitForAlert()
     await browser.dismissAlert()
-    expect(await AlertsPageInstance.checkResult()).toBe("You clicked: Cancel")
+    expect(await AlertsPageInstance.getResult()).toBe("You clicked: Cancel")
   })  
 
   it("should enter text in prompt and confirm", async () => {
     await AlertsPageInstance.open()
 
-    await AlertsPageInstance.clickPromptBtn()
+    await AlertsPageInstance.triggerPromptAlert()
     await AlertsPageInstance.waitForAlert()
     await browser.sendAlertText("Hello!")
     await browser.acceptAlert()
-    expect(await AlertsPageInstance.checkResult()).toBe("You entered: Hello!")
+    expect(await AlertsPageInstance.getResult()).toBe("You entered: Hello!")
   })
 
   it("should accept blank prompt", async () => {
     await AlertsPageInstance.open()
 
-    await AlertsPageInstance.clickPromptBtn()
+    await AlertsPageInstance.triggerPromptAlert()
     await AlertsPageInstance.waitForAlert()
     await browser.acceptAlert()
-    expect(await AlertsPageInstance.checkResult()).toBe("You entered:")
+    expect(await AlertsPageInstance.getResult()).toBe("You entered:")
   })
 
   it("should cancel prompt", async () => {
     await AlertsPageInstance.open()
 
-    await AlertsPageInstance.clickPromptBtn()
+    await AlertsPageInstance.triggerPromptAlert()
     await AlertsPageInstance.waitForAlert()
     await browser.dismissAlert()
-    expect(await AlertsPageInstance.checkResult()).toBe("You entered: null")
+    expect(await AlertsPageInstance.getResult()).toBe("You entered: null")
   })
 })
