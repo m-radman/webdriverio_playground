@@ -13,7 +13,7 @@ describe("File upload test with Page Objects", () => {
 
     await FileUploadPageInstance.attachFile()
     await FileUploadPageInstance.uploadFile()
-    await FileUploadPageInstance.confirmUpload()
+    await FileUploadPageInstance.waitSuccesfulUpload()
     expect(await FileUploadPageInstance.getUploadedFileName()).toBe("test.png")
   })
 })
