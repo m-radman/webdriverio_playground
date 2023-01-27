@@ -31,10 +31,6 @@ class AlertPage {
     await $(this.promptBtn).click()
   }
 
-  async waitForAlert() {
-    await browser.waitUntil(EC.alertIsPresent())
-  }
-
   async getResult(): Promise<string> {
     return $(this.result).getText()
   }
