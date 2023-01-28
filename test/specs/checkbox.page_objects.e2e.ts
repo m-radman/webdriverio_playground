@@ -12,17 +12,17 @@ describe("Checkboxes test with PageObjects", () => {
   it("should check statuses of the checkboxes", async () => {
     await CheckboxPageInstance.open()
 
-    expect(await CheckboxPageInstance.getCheckbox1Status()).toBe(false)
-    expect(await CheckboxPageInstance.getCheckbox2Status()).toBe(true)
+    expect(await CheckboxPageInstance.checkbox1.getCheckboxStatus()).toBe(false)
+    expect(await CheckboxPageInstance.checkbox2.getCheckboxStatus()).toBe(true)
   })
 
   it("should change statuses of the checkboxes", async () => {
     await CheckboxPageInstance.open()
 
-    await CheckboxPageInstance.clickCheckbox1()
-    await CheckboxPageInstance.clickCheckbox2()
+    await CheckboxPageInstance.checkbox1.selectCheckbox()
+    await CheckboxPageInstance.checkbox2.selectCheckbox()
 
-    expect(await CheckboxPageInstance.getCheckbox1Status()).toBe(true)
-    expect(await CheckboxPageInstance.getCheckbox2Status()).toBe(false)
+    expect(await CheckboxPageInstance.checkbox1.getCheckboxStatus()).toBe(true)
+    expect(await CheckboxPageInstance.checkbox2.getCheckboxStatus()).toBe(false)
   })
 })
