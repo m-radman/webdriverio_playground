@@ -108,21 +108,19 @@ Write same test for Login functionality but now _using Page Objects_
 
 ### Tasks to work out Page OBject design 
 
-- [ ] Write test for :point_right: [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
-- [ ] Write test for :point_right: [Inputs](https://the-internet.herokuapp.com/inputs)
-- [ ] Write test for :point_right: [Key Presses](https://the-internet.herokuapp.com/key_presses?)
-- [ ] Write test for :point_right: [JavaScript Alerts](https://the-internet.herokuapp.com/javascript_alerts)
-- [ ] Write test for :point_right: [Hovers](https://the-internet.herokuapp.com/hovers)
-- [ ] Write test for :point_right: [Dynamic Loading](https://the-internet.herokuapp.com/dynamic_loading)
-- [ ] Write test for :point_right: [Dropdown](https://the-internet.herokuapp.com/dropdown)
-- [ ] Write test for :point_right: [Drag and Drop](https://the-internet.herokuapp.com/drag_and_drop)
-- [ ] Write test for :point_right: [Add Remove Elements](https://the-internet.herokuapp.com/add_remove_elements/)
-- [ ] Write test for :point_right: [Frames](https://the-internet.herokuapp.com/frames)
-- [ ] Write test for :point_right: [Windows](https://the-internet.herokuapp.com/windows)
-- [ ] Write test for :point_right: [File upload](https://the-internet.herokuapp.com/upload)
-- [ ] Write test for :point_right: [Exit intent](https://the-internet.herokuapp.com/exit_intent)
-
-
+- [x] Write test for :point_right: [Checkboxes](https://the-internet.herokuapp.com/checkboxes)
+- [x] Write test for :point_right: [Inputs](https://the-internet.herokuapp.com/inputs)
+- [x] Write test for :point_right: [Key Presses](https://the-internet.herokuapp.com/key_presses?)
+- [x] Write test for :point_right: [JavaScript Alerts](https://the-internet.herokuapp.com/javascript_alerts)
+- [x] Write test for :point_right: [Hovers](https://the-internet.herokuapp.com/hovers)
+- [x] Write test for :point_right: [Dynamic Loading](https://the-internet.herokuapp.com/dynamic_loading)
+- [x] Write test for :point_right: [Dropdown](https://the-internet.herokuapp.com/dropdown)
+- [x] Write test for :point_right: [Drag and Drop](https://the-internet.herokuapp.com/drag_and_drop)
+- [x] Write test for :point_right: [Add Remove Elements](https://the-internet.herokuapp.com/add_remove_elements/)
+- [x] Write test for :point_right: [Frames](https://the-internet.herokuapp.com/frames)
+- [x] Write test for :point_right: [Windows](https://the-internet.herokuapp.com/windows)
+- [x] Write test for :point_right: [File upload](https://the-internet.herokuapp.com/upload)
+- [x] Write test for :point_right: [Exit intent](https://the-internet.herokuapp.com/exit_intent)
 
 
 ## WDIO Example with LoginPage: go through example code to understand benefits of the solution with page objects
